@@ -29,9 +29,7 @@ func solution(_ code:String) -> String {
         i+=1
     }
     
-    if ret == "" {
-        ret = "EMPTY"
-    }
+    ret = ret=="" ? "EMPTY" : ret
    
     return ret
 }
