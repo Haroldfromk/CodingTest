@@ -8,15 +8,11 @@ func solution(_ a:Int, _ b:Int, _ n:Int) -> Int {
     var N = n
     
     
-    while true {
+    while N >= a {
         portion = (N / a) * b
         mod = N % a
         N = portion + mod       
         answer += portion     
-    
-        if N < a {
-            break
-        }
     }
 
     return answer
