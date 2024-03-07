@@ -1,16 +1,9 @@
 func solution(_ a:Int, _ b:Int) -> String {
     
-    var day = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+    var day = [3, 1, 3, 2, 3, 2, 3, 3, 2, 3, 2, 3]
     var total = 0
-    
-    if a != 1 {
-        for i in 0..<a-1 {
-            total+=day[i]
-        }
-        total = total + b
-    } else {
-        total = b
-    }
+
+    total = a != 1 ? day[0..<a-1].reduce(0,+) + b : b
     
     switch total%7 {
         case 1 :
