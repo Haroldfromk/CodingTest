@@ -1,12 +1,11 @@
 func solution(_ a:Int, _ b:Int) -> String {
     
     var day = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
-    var arr = day.enumerated().map{$0}
     var total = 0
     
     if a != 1 {
         for i in 0..<a-1 {
-            total+=arr[i].element
+            total+=day[i]
         }
         total = total + b
     } else {
