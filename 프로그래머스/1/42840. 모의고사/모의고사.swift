@@ -5,8 +5,8 @@ func solution(_ answers:[Int]) -> [Int] {
     var score : [Int] = []
     var answer : [Int] = [] 
     
-    var arrA : [Int] = [1,2,3,4,5]
-    var arrB : [Int] = [2,1,2,3,2,4,2,5]
+    var arrA : [Int] = []
+    var arrB : [Int] = []
     var arrC : [Int] = []
     
     var scoreA : Int = 0
@@ -22,9 +22,8 @@ func solution(_ answers:[Int]) -> [Int] {
     }
     
     while arrC.count != 10000 {
-        arrC += [3,3,1,1,2,2,4,4,5,5]
+        arrC += [2,1,2,3,2,4,2,5]
     }
-    
     
     scoreA = zip(arrA,answers).filter{$0==$1}.count
     scoreB = zip(arrB,answers).filter{$0==$1}.count
